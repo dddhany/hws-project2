@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     var countries = [String]()
     var correctAnswer = 0
@@ -57,9 +58,13 @@ class ViewController: UIViewController {
             score -= 1
         }
         
+        /*
         let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
         presentViewController(ac, animated: true, completion: nil)
+        */
+        scoreLabel.text = "\(title). Your score is \(score)."
+        askQuestion()
     }
     
     override func didReceiveMemoryWarning() {
@@ -73,6 +78,7 @@ extension Array {
     mutating func shuffle() {
         for i in 0 ..< (count - 1) {
             let j = Int(arc4random_uniform(UInt32(count - i))) + i
+            guard i != j else { continue }
             swap(&self[i], &self[j])
         }
     }

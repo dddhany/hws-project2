@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -38,6 +39,12 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98z-nH-gIz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score is 0." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhU-Sj-mAf">
+                                <rect key="frame" x="20" y="490" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -45,8 +52,11 @@
                             <constraint firstItem="Roe-Qy-kbt" firstAttribute="centerX" secondItem="Adr-bs-i8K" secondAttribute="centerX" id="0r7-aV-RAE"/>
                             <constraint firstItem="Adr-bs-i8K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K2Q-7i-mRt"/>
                             <constraint firstItem="olE-dB-UOJ" firstAttribute="centerX" secondItem="Roe-Qy-kbt" secondAttribute="centerX" id="Ts6-Az-orB"/>
+                            <constraint firstItem="VhU-Sj-mAf" firstAttribute="top" secondItem="olE-dB-UOJ" secondAttribute="bottom" constant="30" id="dsh-Ra-WIv"/>
                             <constraint firstItem="olE-dB-UOJ" firstAttribute="top" secondItem="Roe-Qy-kbt" secondAttribute="bottom" constant="30" id="kvY-gH-jzZ"/>
                             <constraint firstItem="Adr-bs-i8K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="l2T-8b-LKq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VhU-Sj-mAf" secondAttribute="trailing" id="mOw-o3-PAr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="VhU-Sj-mAf" secondAttribute="leading" id="xe1-gD-Ukd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zdU-Hg-XoM"/>
@@ -54,6 +64,7 @@
                         <outlet property="button1" destination="Adr-bs-i8K" id="lZZ-Xb-V9A"/>
                         <outlet property="button2" destination="Roe-Qy-kbt" id="Qp5-JN-zIA"/>
                         <outlet property="button3" destination="olE-dB-UOJ" id="59B-bS-Gko"/>
+                        <outlet property="scoreLabel" destination="VhU-Sj-mAf" id="vmI-nf-1wT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
