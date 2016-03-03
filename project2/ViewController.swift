@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             countries = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(countries) as! [String]
             correctAnswer = GKRandomSource.sharedRandom().nextIntWithUpperBound(3)
         } else {
-            // Fallback on earlier versions
+            countries.shuffle()
         }
         button1.setImage(UIImage(named: countries[0]), forState: .Normal)
         button2.setImage(UIImage(named: countries[1]), forState: .Normal)
@@ -67,6 +67,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
 
+extension Array {
+    mutating func shuffle() {
+        for i in 0 ..< (count - 1) {
+            let j = Int(arc4random_uniform(UInt32(count - i))) + i
+            swap(&self[i], &self[j])
+        }
+    }
 }
 
