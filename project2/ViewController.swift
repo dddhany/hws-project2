@@ -40,6 +40,7 @@ class ViewController: UIViewController {
             correctAnswer = GKRandomSource.sharedRandom().nextIntWithUpperBound(3)
         } else {
             countries.shuffle()
+            correctAnswer = Int(arc4random_uniform(3))
         }
         button1.setImage(UIImage(named: countries[0]), forState: .Normal)
         button2.setImage(UIImage(named: countries[1]), forState: .Normal)
