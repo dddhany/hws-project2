@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,6 +21,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adr-bs-i8K">
                                 <rect key="frame" x="200" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Adr-bs-i8K" secondAttribute="height" multiplier="2:1" id="daJ-og-7Nh"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4za-Ly-deQ"/>
@@ -27,6 +31,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olE-dB-UOJ">
                                 <rect key="frame" x="200" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="olE-dB-UOJ" secondAttribute="height" multiplier="2:1" id="1NA-59-EhV"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Egd-SS-hgK"/>
@@ -34,6 +41,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roe-Qy-kbt">
                                 <rect key="frame" x="200" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Roe-Qy-kbt" secondAttribute="height" multiplier="2:1" id="9bT-39-cEl"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98z-nH-gIz"/>
@@ -50,6 +60,8 @@
                         <constraints>
                             <constraint firstItem="Roe-Qy-kbt" firstAttribute="top" secondItem="Adr-bs-i8K" secondAttribute="bottom" constant="30" id="0jD-iU-HMC"/>
                             <constraint firstItem="Roe-Qy-kbt" firstAttribute="centerX" secondItem="Adr-bs-i8K" secondAttribute="centerX" id="0r7-aV-RAE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="olE-dB-UOJ" secondAttribute="bottom" constant="20" id="8sN-xD-kFf"/>
+                            <constraint firstItem="Roe-Qy-kbt" firstAttribute="height" secondItem="Adr-bs-i8K" secondAttribute="height" id="I0s-9Z-SMj"/>
                             <constraint firstItem="Adr-bs-i8K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K2Q-7i-mRt"/>
                             <constraint firstItem="olE-dB-UOJ" firstAttribute="centerX" secondItem="Roe-Qy-kbt" secondAttribute="centerX" id="Ts6-Az-orB"/>
                             <constraint firstItem="VhU-Sj-mAf" firstAttribute="top" secondItem="olE-dB-UOJ" secondAttribute="bottom" constant="30" id="dsh-Ra-WIv"/>
@@ -57,6 +69,7 @@
                             <constraint firstItem="Adr-bs-i8K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="l2T-8b-LKq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VhU-Sj-mAf" secondAttribute="trailing" id="mOw-o3-PAr"/>
                             <constraint firstAttribute="leadingMargin" secondItem="VhU-Sj-mAf" secondAttribute="leading" id="xe1-gD-Ukd"/>
+                            <constraint firstItem="olE-dB-UOJ" firstAttribute="height" secondItem="Roe-Qy-kbt" secondAttribute="height" id="xnQ-bZ-60B"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zdU-Hg-XoM"/>
